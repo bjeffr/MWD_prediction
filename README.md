@@ -1,2 +1,2 @@
-# mwd_prediction
-Repository containing all the code for my master's thesis on predicting the molecular weight distribution of plastics from their flow data
+# Predicting the Molecular Weight Distribution of Plastics from their Flow Data
+Repository containing all the code for my master's thesis
