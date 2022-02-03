@@ -32,9 +32,8 @@ def mean_relative_errors(Y_true, Y_pred):
 def ds_size_rel_errors(dir, sample_sizes, labels):
     rel_errs = []
     for n_samples in sample_sizes:
-        df_test = pd.read_csv(f'logs/ds_size/{dir}/df_test.csv').astype(np.float32)
-        Y_test = df_test.iloc[:, :df_test.shape[1] - 140].values
-        Y_pred = np.load(f'logs/ds_size/{dir}/Y_pred_{n_samples}.npy', allow_pickle=False)
+        Y_test = np.load(f'data/predictions/ds_size/{dir}/Y_test.npy', allow_pickle=False)
+        Y_pred = np.load(f'data/predictions/ds_size/{dir}/Y_pred_{n_samples}.npy', allow_pickle=False)
         row = [n_samples]
         row.extend(mean_relative_errors(Y_test, Y_pred))
         rel_errs.append(row)

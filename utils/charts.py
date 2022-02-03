@@ -335,7 +335,7 @@ def plot_freq_range_errors(errors, unimodal):
 
     i = 0
     min_error, max_error = errors.min(), errors.max()
-    freq_ranges = np.load("logs/freq_ranges/freq_ranges.npy", allow_pickle=True)
+    freq_ranges = np.load("data/predictions/freq_ranges/freq_ranges.npy", allow_pickle=True)
     for y, row in enumerate(freq_ranges):
         for f_range in row:
             error = (errors[i] - min_error) / (max_error - min_error)
